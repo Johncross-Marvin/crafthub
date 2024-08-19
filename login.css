@@ -1,0 +1,49 @@
+h1 {
+    padding-left: 30rem;
+    color:rgb(0, 174, 255);
+    display: flex;
+    align-items: center;
+}
+
+form{
+    border-radius: 5px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 0 18px #0003;
+    max-width: 40rem;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('images/backgroundimage.jpeg') no-repeat center center/cover;
+
+
+}
+input, select, textarea{
+    padding: 0.5rem;
+    border: 1px solid #0004;
+    border-radius: 5px;
+    resize: none;
+   
+}
+button{
+    border: 0;
+    background-color:rgb(0, 174, 255);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.fgp{
+    text-align: center;
+    border: 0;
+
+}
+.signup-options{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+}
+.login-form {
+    color: #fff;
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftHub Buyer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome back, Johncross</h1>
+        <div class="header-icons">
+            <div class="logo">
+                <a href="index.html">CraftHub</a>
+            </div>
+            <div class="logout">
+            <li><a href="login.html">Logout</a></li>
+            </div>
+
+            <div class="notification-icon">
+                <img src="/images/notification-icon.png" alt="Notifications">
+                <span class="badge">3</span>
+            </div>
+            <div class="chat-icon">
+                <img src="/images/bubble-chat.png" alt="Chats">
+                <span class="badge">5</span>
+            </div>
+            <div class="call-icon">
+                <img src="/images/call.png" alt="Calls">
+                <span class="badge">1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <h2>Your Stats</h2>
+            <p>Requests Made: 12</p>
+            <p>Amount Spent: ₦500,000</p>
+        </div>
+        <div class="filter-section">
+            <h2>Filters</h2>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+            
+            <label for="rating">Minimum Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5">
+            
+            <label for="reviews">Minimum Reviews:</label>
+            <input type="number" id="reviews" name="reviews" min="0">
+            
+            <button id="apply-filters">Apply Filters</button>
+        </div>
+    <div class="listings">
+
+       
+        <div class="listing-title">
+            <h2>Top Artisans</h2>
+        </div>
+        <div class="service-listings">
+            <div class="service-card">
+                <img src="/images/plumbers-kindelmedia-8486972.jpg" alt="Service Image">
+                <h3>Plumber</h3>
+                <p>I will do your plumbering for kitchen and toilet</p>
+                <div class="service-details">
+                    <span class="rating">4.8 ★</span>
+                    <span class="reviews">250 Reviews</span>
+                    <span class="location">Wuye, FCT Abuja</span>
+                </div>
+                <div class="actions">
+                    <button class="chat-btn">Chat</button>
+                    <button class="call-btn">Call</button>
+                </div>
+        </div>
+        <div class="service-card">
+            <img src="/images/electrician-emmages-8005397.jpg" alt="Service Image">
+            <h3>Professional Electrician</h3>
+            <p>I will carry out full electrical installation and fix light issues for you.</p>
+            <div class="service-details">
+                <span class="rating">4.8 ★</span>
+                <span class="reviews">50 Reviews</span>
+                <span class="location">Lagos, Nigeria</span>
+            </div>
+            <div class="actions">
+                <button class="chat-btn">Chat</button>
+                <button class="call-btn">Call</button>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="/images/clearner.jpg" alt="Service Image">
+            <h3>Service Title</h3>
+            <p>Service Description</p>
+            <div class="service-details">
+                <span class="rating">4.0 ★</span>
+                <span class="reviews">60 Reviews</span>
+                <span class="location">Utako, FCT Abuja</span>
+            </div>
+            <div class="actions">
+                <button class="chat-btn">Chat</button>
+                <button class="call-btn">Call</button>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="/images/chef.jpg" alt="Service Image">
+            <h3>Service Title</h3>
+            <p>Service Description</p>
+            <div class="service-details">
+                <span class="rating">4.8 ★</span>
+                <span class="reviews">50 Reviews</span>
+                <span class="location">Wuse, FCT Abuja</span>
+            </div>
+            <div class="actions">
+                <button class="chat-btn">Chat</button>
+                <button class="call-btn">Call</button>
+            </div>
+    </div>
+    <div class="service-card">
+        <img src="/images/gardener.jpg" alt="Service Image">
+        <h3>Service Title</h3>
+        <p>Service Description</p>
+        <div class="service-details">
+            <span class="rating">5.0 ★</span>
+            <span class="reviews">10 Reviews</span>
+            <span class="location">Garki, FCT Abuja</span>
+        </div>
+        <div class="actions">
+            <button class="chat-btn">Chat</button>
+            <button class="call-btn">Call</button>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <img src="/images/mower.jpg" alt="Service Image">
+        <h3>Service Title</h3>
+        <p>Service Description</p>
+        <div class="service-details">
+            <span class="rating">3.8 ★</span>
+            <span class="reviews">20 Reviews</span>
+            <span class="location">Lugbe, FCT Abuja</span>
+        </div>
+        <div class="actions">
+            <button class="chat-btn">Chat</button>
+            <button class="call-btn">Call</button>
+        </div>
+    </div>
+</div>   
+
+    <!-- Notification Pop-up -->
+    <div id="notification-popup" class="popup hidden">
+        <h3>Notifications</h3>
+        <ul>
+            <li>You have a new request from [Seller Name]</li>
+            <!-- Add more notifications as needed -->
+        </ul>
+        <button id="close-notification">Close</button>
+    </div>
+
+    <!-- Chat Pop-up -->
+    <div id="chat-popup" class="popup hidden">
+        <h3>Chats</h3>
+        <ul>
+            <li>[Seller Name]: Hello! How can I help you?</li>
+            <!-- Add more chats as needed -->
+        </ul>
+        <button id="close-chat">Close</button>
+    </div>
+
+    <!-- Call Pop-up -->
+    <div id="call-popup" class="popup hidden">
+        <h3>Missed Calls</h3>
+        <ul>
+            <li>Missed call from [Seller Name]</li>
+            <!-- Add more call logs as needed -->
+        </ul>
+        <button id="close-call">Close</button>
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Pop-up handling
+    const notificationPopup = document.getElementById('notification-popup');
+    const chatPopup = document.getElementById('chat-popup');
+    const callPopup = document.getElementById('call-popup');
+
+    document.querySelector('.notification-icon img').addEventListener('click', function() {
+        notificationPopup.classList.toggle('hidden');
+    });
+
+    document.querySelector('.chat-icon img').addEventListener('click', function() {
+        chatPopup.classList.toggle('hidden');
+    });
+
+    document.querySelector('.call-icon img').addEventListener('click', function() {
+        callPopup.classList.toggle('hidden');
+    });
+
+    document.getElementById('close-notification').addEventListener('click', function() {
+        notificationPopup.classList.add('hidden');
+    });
+
+    document.getElementById('close-chat').addEventListener('click', function() {
+        chatPopup.classList.add('hidden');
+    });
+
+    document.getElementById('close-call').addEventListener('click', function() {
+        callPopup.classList.add('hidden');
+    });
+
+    // Filter functionality
+    document.getElementById('apply-filters').addEventListener('click', function() {
+        const location = document.getElementById('location').value.toLowerCase();
+        const rating = parseFloat(document.getElementById('rating').value);
+        const reviews = parseInt(document.getElementById('reviews').value);
+
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            const cardLocation = card.querySelector('.location').textContent.toLowerCase();
+            const cardRating = parseFloat(card.querySelector('.rating').textContent);
+            const cardReviews = parseInt(card.querySelector('.reviews').textContent);
+
+            if (cardLocation.includes(location) && cardRating >= rating && cardReviews >= reviews) {
+                // Show the card if it matches all the filters
+                card.style.display = 'block';
+            } else {
+                // Hide the card if it doesn't match
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+    </script>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header h1 {
+    margin: 0;
+    color: white;
+    font-size: 40px; 
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+.header-icons .logo a {
+    color: white; /* Text color white */
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Styling for the logout link */
+.header-icons .logout a {
+    color: white; /* Text color white */
+    font-size: 1em;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ff5a5f; /* Optional: Add background color to make it stand out */
+    transition: background-color 0.3s ease;
+}
+
+.header-icons .logout a:hover {
+    background-color: #ff3333; /* Change color on hover */
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.filter-section {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section h2 {
+    margin-top: 0;
+}
+
+.filter-section label {
+    display: block;
+    margin-top: 10px;
+}
+
+.filter-section input, .filter-section button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #007bff;
+}
+
+.listing-title {
+    display: flex;
+    text-align: justify;
+}
+/* Main container for service listings */
+.service-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 20px; /* space between cards */
+    padding: 20px;
+}
+
+/* Individual service card styling */
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.service-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.service-card .details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.service-card .chat-btn, .service-card .call-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.service-card .chat-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.service-card .call-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.service-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+}
+
+.service-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.actions button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #5a00d4;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+</style>
+<footer class="footer">
+    <p>&copy; 2024 CraftHub. All rights reserved.</p>
+</footer>
+</body>
+</html>

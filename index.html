@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">CraftHub</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login" onclick="redirectToLogin()">Login</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Find the Right Domestic Worker for Your Job</h1>
+            <p>Join CraftHub and connect with skilled Domestic professionals in your neigborhood.</p>
+            <div class="hero-buttons">
+                <button class="btn-cta" onclick="location.href='seller-signup.html'">Join as a Seller</button>
+                <button class="btn-cta" onclick="location.href='buyer-signup.html'">Join as a Buyer</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h1>Our Services</h1>
+        <p>Our Services are not just limited to what you see here. Get personalized service recommendation on your seller dashboard, and easily contact workers near you, workers within your neigborhood.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/electrician-emmages-8005397.jpg" alt="Electrician">
+                <h3>Electricians</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/plumbers-kindelmedia-8486972.jpg" alt="Plumber">
+                <h3>Plumbers</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/pexels-carpenter.jpg" alt="Carpenter">
+                <h3>Carpenters</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/gardener.jpg" alt="Carpenter">
+                <h3>Gardner</h3>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+    <!-- <section class="service-filter">
+        <h3>Search for more services: <input type="search" value="Search here"></h3> 
+    </section> -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1>About CraftHub</h1>
+        <p>CraftHub connects you with skilled Domestic professional in your neigborhood, making it easy to find the right professional for
+            any job. Our platform is designed to help you find and hire experts in various trades with just a few
+            clicks.</p>
+    </section>
+
+        <!-- How to find a Worker Section -->
+
+        <!-- <section id="how-to-find-worker">
+            <h2>How to find a Worker through Helpers Near Me?</h2>
+            <div class="slider">
+                <div class="slides-container">
+                    <div class="slide">
+                        <img src="/images/hiring.png" alt="Find & Hire Now">
+                        <p>Follow 'Find & Hire Now'</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/login.png" alt="Login with Phone Number">
+                        <p>Login with a valid Phone number</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/verify.png" alt="Enter Worker Profile">
+                        <p>Enter the Profile of worker</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/map.png" alt="Enter Worker Profile">
+                        <p>Enter your Location</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/eye.png" alt="Enter Worker Profile">
+                        <p>View shortlisted workers from nearby
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/verified.png" alt="Enter Worker Profile">
+                        <p>Tap on profiles to view their details
+                        </p>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/pay-per-click.png" alt="Enter Worker Profile">
+                        <p>Pay, connect & hire anyone you like
+                        </p>
+                    </div>
+                    <!-- Add more slides as needed -->
+                <!-- </div>
+                <div class="navigation">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>   
+            </div>
+        </section> --> -->
+
+
+        <section id="how-to-find-worker">
+            <h2>How to find a Domestic Worker through CraftHub?</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <img src="/images/hiring.png" alt="Find & Hire Now">
+                    <p>Follow 'Find & Hire Now'</p>
+                </div>
+                <div class="step">
+                    <img src="/images/login.png" alt="Login with Phone Number">
+                    <p>Login with a valid Phone number</p>
+                </div>
+                <div class="step">
+                    <img src="/images/verified.png" alt="Enter Worker Profile">
+                    <p>Enter the Profile of worker</p>
+                </div>
+                <div class="step">
+                    <img src="/images/eye.png" alt="View Worker Details">
+                    <p>View Worker Details</p>
+                </div>
+                <div class="step">
+                    <img src="/images/recruitment.png" alt="Select Worker">
+                    <p>Select Worker</p>
+                </div>
+                <div class="step">
+                    <img src="/images/hired.png" alt="Hire Worker">
+                    <p>Hire Worker</p>
+                </div>
+                <div class="step">
+                    <img src="/images/pay-per-click.png" alt="Payment Process">
+                    <p>Complete Payment Process</p>
+                </div>
+                <div class="step">
+                    <img src="/images/check.png" alt="Confirmation">
+                    <p>Get Confirmation</p>
+                </div>
+                <div class="step">
+                    <img src="/images/person.png" alt="Confirmation">
+                    <p>Your Order</p>
+                </div>
+            </div>
+        </section>
+        
+    
+        <!-- Lives Impacted Section -->
+        <section id="lives-impacted">
+            <h2>Lives Impacted thus far:</h2>
+            <div class="impact-stats">
+                <div class="stat">
+                    <h3>70,200+</h3>
+                    <p>Workers have joined CraftHub to find local jobs/employment</p>
+                </div>
+                <div class="stat">
+                    <h3>37,500+</h3>
+                    <p>Workers have received local jobs/employment offers directly from CraftHub Employers</p>
+                </div>
+                <div class="stat">
+                    <h3>29,400+</h3>
+                    <p>Women Workers have received local jobs/employment offers directly from CraftHub Employers</p>
+                </div>
+                <div class="stat">
+                    <h3>1,86,800+</h3>
+                    <p>Family members of Workers have been supported by the CraftHub initiative</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Customer Reviews Section -->
+        <section id="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-box">
+                    <p><strong>Elder Frederick Jones</strong> (NIIT Wuse 2, FCT Abuja)</p>
+                    <blockquote>I have hired a cook just like <strong>ANGELA 😂</strong> from you. It will be great if you can provide more options within a 5km area.</blockquote>
+                    <p>Rating: ★★★★☆ (4.8)</p>
+                </div>
+                <div class="review-box">
+                    <p><strong>Zino</strong> (Maitama, FCT Abuja)</p>
+                    <blockquote>Good experience so far. Got a helpful gardener from you, and he solved my problem.</blockquote>
+                    <p>Rating: ★★★★☆ (4.2)</p>
+                </div>
+                <div class="review-box">
+                    <p><strong>Ifi</strong> (Life Camp, FCT Abuja)</p>
+                    <blockquote>Excellent experience so far. Got a great Chef from you; she has been an awesome cooking assistant.</blockquote>
+                    <p>Rating: ★★★★☆ (4.0)</p>
+                </div>
+                <div class="review-box">
+                    <p><strong>Peter</strong> (Buwari, FCT Abuja)</p>
+                    <blockquote>Great experience so far. Got a helpful Dog trainer from you. He is a good guy.</blockquote>
+                    <p>Rating: ★★★★☆ (4.2)</p>
+                </div>
+                <div class="review-box">
+                    <p><strong>Mariam</strong> (Buwari, FCT Abuja)</p>
+                    <blockquote>Thank you for this innovation. I got a helpful hair stylist and beauty expert from you. She does a great job.</blockquote>
+                    <p>Rating: ★★★★☆ (4.0)</p>
+                </div>
+                <div class="review-box">
+                    <p><strong>Praise</strong> (Asokoro, FCT Abuja)</p>
+                    <blockquote>Thank you for this innovation. I got a helpful photographer from you. He greatly complement me.</blockquote>
+                    <p>Rating: ★★★★☆ (4.2)</p>
+                </div>
+            </div>
+        </section>
+        <!-- Quick Links Section -->
+        <section id="quick-links">
+            <h2>Quick Links</h2>
+            <div class="links-container">
+                <div class="link-item">
+                    <img src="/images/search.png" alt="Find & Hire Workers">
+                    <p>Find & Hire Workers</p>
+                </div>
+                <div class="link-item">
+                    <img src="/images/verify.png" alt="Verify your Worker">
+                    <p>Verify your Worker</p>
+                </div>
+                <div class="link-item">
+                    <img src="/images/person.png" alt="What's Trending">
+                    <p>Your Order</p>
+                </div>
+                <div class="link-item">
+                    <img src="/images/rating.png" alt="What's Trending">
+                    <p>Customer Reviews</p>
+                </div>
+                <div class="link-item">
+                    <img src="/images/influencer.png" alt="What's Trending">
+                    <p>Refer and Endorse a Worker</p>
+                </div>
+                <!-- Add more link items as necessary -->
+            </div>
+        </section>    
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CraftHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
